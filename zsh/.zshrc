@@ -17,3 +17,5 @@ plug "zap-zsh/fzf"
 plug "zap-zsh/exa"
 plug "zsh-users/zsh-syntax-highlighting"
 
+# init fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

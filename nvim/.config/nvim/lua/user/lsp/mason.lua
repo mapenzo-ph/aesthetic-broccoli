@@ -1,6 +1,20 @@
 local servers = {
-	"sumneko_lua",
-	"jsonls",
+	-- "clangd",     -- C/C++
+  -- "fortls",     -- fortran
+  -- "cmake",      -- cmake
+  "rust_analyzer", --rust
+  "pyright",       -- python
+  "sumneko_lua",   -- lua
+  -- "zls",        -- zig
+  -- "tsserver",   -- typescript
+  -- "julials",    -- julia
+	-- "jsonls",     -- JSON
+  "taplo",         -- TOML
+  -- "yamlls",        -- yaml
+  -- "marksman",   -- markdown
+  -- "lemmix",      -- XML
+  -- "dockerls",   -- docker
+  -- "ansiblels",  -- ansible
 }
 
 local settings = {
