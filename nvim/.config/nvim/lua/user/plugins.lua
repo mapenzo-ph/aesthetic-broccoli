@@ -66,8 +66,17 @@ return packer.startup(function(use)
   -- use "jose-elias-alvarez/null-ls.nvim"   -- LSP diagnostics and code actions
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim"
-  use "nvim-telescope/telescope-media-files.nvim"
+  use "nvim-telescope/telescope.nvim"              -- telescope
+  use "nvim-telescope/telescope-media-files.nvim"  -- preview images in telescope
+
+  -- Treesitter
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = function()
+      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+      ts_update()
+    end,
+  })
 
   -- Colorscheme plugins 
   use "folke/tokyonight.nvim"   -- Tokyo Night colorscheme
