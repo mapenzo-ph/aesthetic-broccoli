@@ -54,6 +54,7 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions 
   use "hrsh7th/cmp-nvim-lsp"     -- LSP completions
   -- use "hrsh7th/cmp-nvim-lua"     -- lua completions for vim API
+  use "windwp/nvim-autopairs"    -- autopairs completion
 
   -- snippets plugins
   use "L3MON4D3/LuaSnip"             -- snippet engine
@@ -77,6 +78,8 @@ return packer.startup(function(use)
       ts_update()
     end,
   })
+  use "p00f/nvim-ts-rainbow" 
+  use "nvim-treesitter/playground"
 
   -- Colorscheme plugins 
   use "folke/tokyonight.nvim"   -- Tokyo Night colorscheme
