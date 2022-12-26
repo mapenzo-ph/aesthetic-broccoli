@@ -78,8 +78,15 @@ return packer.startup(function(use)
       ts_update()
     end,
   })
-  use "p00f/nvim-ts-rainbow" 
+  use "p00f/nvim-ts-rainbow"
   use "nvim-treesitter/playground"
+
+  -- Comments
+  use "numToStr/Comment.nvim"
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+
+  -- Git integration
+  use "lewis6991/gitsigns.nvim"
 
   -- Colorscheme plugins 
   use "folke/tokyonight.nvim"   -- Tokyo Night colorscheme
