@@ -1,5 +1,5 @@
 -- :help options
-o = vim.opt
+local o = vim.opt
 
 -- Editor configuration --
 o.fileencoding = "utf-8"                  -- encoding written to new files
