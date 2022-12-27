@@ -25,7 +25,10 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Open/close left hand explorer
-keymap("n", "<leader>e", ":Lex 30<CR>", opts)
+-- keymap("n", "<leader>e", ":Lex 30<CR>", opts)
+
+-- Open/close Nvimtree
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>",   ":resize +2<CR>", opts)

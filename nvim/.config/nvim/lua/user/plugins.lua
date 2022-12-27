@@ -64,7 +64,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"             -- enable LSP
   use "williamboman/mason.nvim"           -- simple language server
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
-  -- use "jose-elias-alvarez/null-ls.nvim"   -- LSP diagnostics and code actions
+  use "jose-elias-alvarez/null-ls.nvim"   -- LSP diagnostics and code actions
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"              -- telescope
@@ -87,6 +87,14 @@ return packer.startup(function(use)
 
   -- Git integration
   use "lewis6991/gitsigns.nvim"
+
+  -- File tree
+  use "kyazdani42/nvim-web-devicons" -- icons, also used in bufferline
+  use "kyazdani42/nvim-tree.lua"
+
+  -- Bufferline
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
 
   -- Colorscheme plugins 
   use "folke/tokyonight.nvim"   -- Tokyo Night colorscheme
