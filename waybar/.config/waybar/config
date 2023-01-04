@@ -79,7 +79,7 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " {signalStrength}%",
+        "format-wifi": "  {signalStrength}%",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{essid}  -  {gwaddr} ({ifname})",
         "format-linked": "{ifname} (No IP) ",
@@ -90,14 +90,14 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%",
-        "format-bluetooth-muted": " {icon}",
-        "format-muted": " {format_source}",
-        // "format-source": "{volume}% ",
-        // "format-source-muted": "",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": "ﱝ ",
+        "format-muted": "ﱝ ",
+        // "format-source": " {volume}%",
+        // "format-source-muted": " ",
         "format-icons": {
-            "headphone": "",
-            "default": ["", "", ""]
+            "headphone": " ",
+            "default": ["奄", "奔", "墳"]
         },
         // "on-click": "pavucontrol"
     }
@@ -107,7 +107,7 @@
     //    "return-type": "json",
     //    "max-length": 40,
     //    "format-icons": {
-    //        "spotify": "",
+    //        "spotify": " ",
     //        "default": "🎜"
     //    },
     //    "escape": true,

@@ -220,6 +220,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #
+# Media Keys for Lenovo laptop
+#
+    bindsym XF86AudioMute exec pamixer -t
+    bindsym XF86AudioRaiseVolume exec pamixer -i 2
+    bindsym XF86AudioLowerVolume exec pamixer -d 2
+#
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
