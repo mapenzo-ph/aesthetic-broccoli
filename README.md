@@ -1,5 +1,7 @@
-# Dotfiles for MacOS
+# Dotfiles for Arch Linux
 Included programs
 - zsh
-- iTerm2
+- Alacritty
 - Neovim
+- Sway
+- Waybar
