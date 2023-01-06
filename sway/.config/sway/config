@@ -227,6 +227,9 @@ bindsym $mod+r mode "resize"
     bindsym XF86AudioLowerVolume exec pamixer -d 2
     bindsym XF86MonBrightnessUp   exec brightnessctl s 2%+
     bindsym XF86MonBrightnessDown exec brightnessctl s 2%-
+    bindsym XF86AudioMicMute exec pamixer --default-source -t
+    bindsym ctrl+alt+tab workspace next_on_output
+    bindsym shift+ctrl+alt+tab workspace prev_on_output
 #
 # Status Bar:
 #
@@ -253,4 +256,4 @@ bar {
 include /etc/sway/config.d/*
 
 ### Font 
-font pango:JetBrainsMonoNL Medium 15
+# font pango:JetBrainsMonoNL Medium 15

@@ -94,7 +94,7 @@
         "format-bluetooth-muted": " OFF",
         "format-muted": " OFF",
         // "format-source": " {volume}%",
-        // "format-source-muted": "",
+        // "format-source-muted": " OFF",
         "format-icons": {
             "headphone": " ",
             "default": ["", ""]
