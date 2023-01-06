@@ -90,14 +90,14 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%",
-        "format-bluetooth-muted": "ﱝ ",
-        "format-muted": "ﱝ ",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": "",
+        "format-muted": "",
         // "format-source": " {volume}%",
-        // "format-source-muted": " ",
+        // "format-source-muted": "",
         "format-icons": {
             "headphone": " ",
-            "default": ["奄", "奔", "墳"]
+            "default": ["", ""]
         },
         // "on-click": "pavucontrol"
     }
