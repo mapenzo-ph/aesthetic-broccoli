@@ -1,13 +1,13 @@
 {
-    "layer": "top", // Waybar at top layer
+    "layer": "top",    // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 20, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    // "spacing": 4, // Gaps between modules (4px)
+    "height": 20,      // Waybar height (to be removed for auto height)
+    // "spacing": 2,   // Gaps between modules (4px)
+
     // Choose the order of the modules
     "modules-left": ["sway/workspaces"],
     "modules-center": [],
-    "modules-right": ["memory", "cpu", "temperature", "pulseaudio", "network", "battery", "idle_inhibitor", "clock"],
+    "modules-right": ["memory", "cpu", "temperature", "pulseaudio", "bluetooth", "network", "idle_inhibitor", "battery", "clock"],
     
     "sway/workspaces": {
 	"disable-scroll": true,
@@ -27,8 +27,7 @@
     },
     
     "clock": {
-        // "timezone": "Europe/Rome",
-	"format": "{:%a %d %b %R}",
+	    "format": "{:%a %d %b %R}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
@@ -42,19 +41,10 @@
     },
 
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 75,
-        // "format-critical": "{temperatureC}°C {icon}",
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
-
-    //"backlight": {
-    //    // "device": "acpi_video1",
-    //    "format": "{percent}% {icon}",
-    //    "format-icons": ["", "", "", "", "", "", "", "", ""]
-    //},
 
     "battery": {
 	"bat": "BAT0",
@@ -66,54 +56,36 @@
         },
         "format": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        // "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
 
-    //"battery#bat2": {
-    //    "bat": "BAT2"
-    //},
-
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{essid}  -  {gwaddr} ({ifname})",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "⚠ Disconnected ",
-        //"format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": " ",
+        "format-ethernet": "ﯱ ",
+        "tooltip-format": "ssid: {essid} \nadd: {gwaddr} ({ifname}) \nsignal: {signalStrength}%",
+        "format-linked": " ",
+        "format-disconnected": "⚠",
     },
 
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%",
-        "format-bluetooth-muted": " OFF",
-        "format-muted": " OFF",
-        // "format-source": " {volume}%",
-        // "format-source-muted": " OFF",
+        "format": "{icon}",
+        "format-muted": "婢",
+        "format-bluetooth}": "", 
+        "format-bluetooth-muted": "婢",
         "format-icons": {
             "headphone": " ",
-            "default": ["", ""]
+            "default": ["奄", "奔", "墳"]
         },
-        // "on-click": "pavucontrol"
-    }
+    },
 
-    //"custom/media": {
-    //    "format": "{icon} {}",
-    //    "return-type": "json",
-    //    "max-length": 40,
-    //    "format-icons": {
-    //        "spotify": " ",
-    //        "default": "🎜"
-    //    },
-    //    "escape": true,
-    //    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-    //    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    //}
+    "bluetooth": {
+    "format-on": "",
+    "format-off": "",
+    "format-connected":"",
+    "tooltip-format": "name:  {controller_alias} ({controller_address})",
+  	"tooltip-format-connected": "name:  {controller_alias} ({controller_address})\nconnected devices:\n{device_enumerate}",
+  	"tooltip-format-enumerate-connected": "- {device_alias} ({device_address})"
+    }
 
 }
 
