@@ -19,3 +19,6 @@ plug "zsh-users/zsh-syntax-highlighting"
 
 # init fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# source variables for oneApi
+source /opt/intel/oneapi/setvars.sh --include-intel-llvm
