@@ -21,4 +21,8 @@ plug "zsh-users/zsh-syntax-highlighting"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # source variables for oneApi
-source /opt/intel/oneapi/setvars.sh --include-intel-llvm > /dev/null
+# source /opt/intel/oneapi/setvars.sh --include-intel-llvm > /dev/null
+
+# add modules functionality
+source /etc/profile.d/modules.sh
+export MODULEPATH=$MODULEPATH:/opt/intel/oneapi/modulefiles
