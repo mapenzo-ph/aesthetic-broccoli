@@ -61,9 +61,9 @@ output DP-2 resolution 3840x2160 position 1536,0 scale 1.4
 
 exec swayidle -w \
             timeout 300 'swaymsg "output * dpms off"' \
-            timeout 600 'swaylock -f -S --effect-blur 7x5 --indicator' \
+            timeout 600 'swaylock -f -S --effect-blur 7x5 --indicator --clock' \
                     resume 'swaymsg "output * dpms on"' \
-            before-sleep 'swaylock -f -S --effect-blur 7x5 --indicator'
+            before-sleep 'swaylock -f -S --effect-blur 7x5 --indicator --clock'
 
 ### Input configuration
 #
