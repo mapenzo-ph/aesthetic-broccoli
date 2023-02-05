@@ -7,6 +7,18 @@ bufferline = "multiple"
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
+h = "insert_mode"
+i = "move_line_up"
+k = "move_line_down"
+j = "move_char_left"
+l = "move_char_right"
+
+[keys.select]
+h = "insert_mode"
+i = "extend_line_up"
+k = "extend_line_down"
+j = "extend_char_left"
+l = "extend_char_right"
 
 [editor.cursor-shape]
 insert = "bar"
