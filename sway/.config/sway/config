@@ -89,6 +89,9 @@ input type:touchpad {
     scroll_factor 0.4
 }
 
+### Disable moving focus with mouse pointer
+focus_follows_mouse no
+
 ### Start notification daemon
 exec mako
 
