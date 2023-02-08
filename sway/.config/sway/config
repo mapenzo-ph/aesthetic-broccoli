@@ -66,6 +66,14 @@ exec swayidle -w \
                     resume 'swaymsg "output * dpms on"' \
             before-sleep 'swaylock -f -S --effect-blur 7x5 --indicator --clock'
 
+### Conditional clamshell mode
+bindswitch --reload --locked lid:on \
+            exec '[ $(swaymsg -t get_outputs | grep name | wc -l) -gt 1 ] \
+            && swaymsg "output eDP-1 disable" \
+            && notify-send -t 1500 "clamshell mode on"'
+bindswitch --reload --locked lid:off exec 'swaymsg "output eDP-1 enable" \
+            && notify-send -t 1500 "clamshell mode off"'
+
 ### Input configuration
 #
 # Example configuration:
@@ -279,10 +287,6 @@ include /etc/sway/config.d/*
 
 ### Font 
 # font pango:JetBrainsMonoNL Medium 15
-
-### Conditional clamshell mode
-bindswitch --reload --locked lid:on exec '[ $(swaymsg -t get_outputs | grep name | wc -l) -gt 1 ] && swaymsg output eDP-1 disable && notify-send -t 1500 "clamshell mode active"'
-bindswitch --reload --locked lid:off output eDP-1 enable
 
 ### systemd for wob
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
